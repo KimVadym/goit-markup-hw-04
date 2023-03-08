@@ -145,6 +145,15 @@ body {
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: var(--dark);
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.jpg);
 }
 
 .hero-container {
@@ -226,6 +235,29 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
+}
+/* ==================icon=========== */
+.page:before {
+  display: block;
+  content: "";
+  height: 112px;
+  margin-bottom: 8px;
+  background: var(--light);
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page:nth-child(1)::before {
+  background-image: url(../images/section2/camila.jpg);
+}
+.page:nth-child(2)::before {
+  background-image: url(../images/section2/clock.png);
+}
+.page:nth-child(3)::before {
+  background-image: url(../images/section2/diagram.png);
+}
+.page:nth-child(4)::before {
+  background-image: url(../images/section2/astronaut.png);
 }
 
 /*------------------------ what are we doing----------------- */
