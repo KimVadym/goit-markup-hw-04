@@ -154,6 +154,9 @@ body {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-container {
@@ -343,9 +346,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
 }
-.team-social-item {
+.team-social-item-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,9 +356,9 @@ body {
   background-color: var(--primary-brand);
   border-radius: 50%;
 }
-.team-cocial-item-btn {
-  width: 16px;
-  height: 16px;
+.team-social-item-btn:hover,
+.team-social-item-btn:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* =====================customers================ */
@@ -378,19 +380,26 @@ body {
   justify-content: center;
 }
 .customers-item {
-  display: block;
-  content: "";
-  width: 104px;
-  height: 56px;
-
-  background-position: center;
-}
-
-.customers-box-item {
-  padding: 16px 32px;
+  width: 168px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
 }
+.customers-item:hover,
+.customers-item:focus {
+  border: 1px solid var(--pressed-state);
+}
+.svg-icon {
+  fill: #8e8f99;
+}
+.svg-icon:hover,
+.svg-icon:focus {
+  fill: var(--pressed-state);
+}
+
 .customers-box-item:not(:last-child) {
   margin-right: 24px;
 }
@@ -428,6 +437,7 @@ footer {
 }
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 .footer-box-left-item {
   display: flex;
@@ -446,7 +456,7 @@ footer {
 .footer-box-left-title:not(:last-child) {
   margin-right: 16px;
 }
-.footer-box-left-title {
+.footer-social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,6 +465,10 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding: 0;
+}
+.footer-social:hover,
+.footer-social:focus {
+  background: var(--success);
 }
 
 /*----------------------------- portfolio-------------------- */
@@ -494,6 +508,7 @@ footer {
   color: var(--main);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
 }
 
 .project-name {
@@ -541,6 +556,7 @@ footer {
 }
 .project-titel:hover,
 .project-titel:focus {
+  display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
